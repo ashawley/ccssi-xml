@@ -29,7 +29,7 @@ scalacOptions in (Compile) ++= Seq(
 libraryDependencies ++= List(
   "org.scalacheck" %% "scalacheck" % "1.13.2" % "test",
   "org.scala-lang.modules" %% "scala-xml" % "1.0.5",
-  "org.json4s" %% "json4s-native" % "3.3.0"
+  "org.json4s" %% "json4s-native" % "3.4.0"
 )
 
 lazy val xmlToJson = inputKey[Unit]("Convert an XML standard to JSON")
