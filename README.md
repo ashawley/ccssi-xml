@@ -17,10 +17,11 @@ put all the XML nearby -- for example `src/main/xml`.
 The application accepts one or more XML files as argument(s) of the
 `run` target of SBT.
 
-    > run src/main/xml/ela-literacy.xml
-    [info] Running ccssi.Main src/main/xml/ela-literacy.xml
+    > run src/main/xml/ela-literacy.xml src/main/xml/math.xml
+    [info] Running ccssi.Main src/main/xml/ela-literacy.xml src/main/xml/math.xml
     Wrote JSON to file src/main/xml/ela-literacy.json
-    [success] Total time: 1 s, completed Jun 31, 2016 12:20:51 PM
+    Wrote JSON to file src/main/xml/math.json
+    [success] Total time: 4 s, completed Jun 31, 2016 12:20:51 PM
 
 There is also a custom SBT task, called `xmlToJsonDir`, that will
 process all the XML files under a directory and convert them to JSON.
