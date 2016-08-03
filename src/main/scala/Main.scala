@@ -1,6 +1,5 @@
 package ccssi
 
-import java.lang._
 import scala._
 import scala.Predef._
 import scala.util.matching.Regex
@@ -10,7 +9,7 @@ object Main extends scala.App {
   val extMatcher: Regex = "\\.xml\\Z".r
 
   def loadXml(file: String): scala.xml.Elem = {
-    val src = scala.io.Source.fromFile(file)
+    val src: scala.io.BufferedSource = scala.io.Source.fromFile(file)
     scala.xml.XML.load(src.bufferedReader)
   }
 
@@ -21,7 +20,7 @@ object Main extends scala.App {
 
       case Some(_: String) => {
 
-        val jsonFilename = extMatcher.replaceFirstIn(file, ".json")
+        val jsonFilename: String = extMatcher.replaceFirstIn(file, ".json")
         val outFile = new java.io.File(jsonFilename)
         val writer = new java.io.PrintWriter(outFile)
 

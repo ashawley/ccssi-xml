@@ -4,12 +4,13 @@ package xml
 trait LearningStandardsXml {
 
   def fromXml(elem: scala.xml.Elem): dsl.LearningStandards = {
-    val items = (elem \ "LearningStandardItem")
-    val version = (elem \ "CoreStandardVersion").head.text
+
     dsl.LearningStandards(
-      version,
-      for {
-        item <- items
+
+      version = (elem \ "CoreStandardVersion").head.text,
+
+      items = for {
+        item <- (elem \ "LearningStandardItem")
       } yield {
         dsl.LearningStandard.fromXml(item)
       }

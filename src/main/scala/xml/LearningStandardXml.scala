@@ -5,8 +5,10 @@ import scala.collection.immutable.StringOps
 
 trait LearningStandardXml {
 
-  def fromXml(std: scala.xml.Node) =
+  def fromXml(std: scala.xml.Node): dsl.LearningStandard =
+
     dsl.LearningStandard(
+
       refId = (std \@ "RefID"),
 
       refUri = (std \ "RefURI").head.text,
