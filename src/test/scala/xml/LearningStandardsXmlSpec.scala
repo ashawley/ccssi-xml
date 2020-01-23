@@ -22,7 +22,7 @@ object LearningStandardsXmlSpec extends Properties("LearningStandardsXml") {
   property("fromXml(emptyXml)") = {
     o.fromXml(emptyXml) ?= dsl.LearningStandards(
       "",
-      Traversable.empty[dsl.LearningStandard]
+      Iterable.empty[dsl.LearningStandard]
     )
   }
 }

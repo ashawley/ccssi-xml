@@ -3,7 +3,7 @@
 import sbt.complete.Parser
 import sbt.complete.Parsers._
 
-scalaVersion := "2.11.8" // "2.12.0-M5"
+scalaVersion := "2.13.1"
 
 // https://tpolecat.github.io/2014/04/11/scalac-flags.html
 scalacOptions in (Compile) ++= Seq(
@@ -16,20 +16,17 @@ scalacOptions in (Compile) ++= Seq(
   "-unchecked",
   "-Xfatal-warnings",
   "-Xlint",
-  "-Yno-adapted-args",
   "-Ywarn-dead-code",
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",
-  "-Xfuture",
-  "-Ywarn-unused-import",
   "-Yno-predef",
   "-Yno-imports"
 )
 
 libraryDependencies ++= List(
-  "org.scalacheck" %% "scalacheck" % "1.13.2" % "test",
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.5",
-  "org.json4s" %% "json4s-native" % "3.4.0"
+  "org.scalacheck" %% "scalacheck" % "1.14.3" % "test",
+  "org.scala-lang.modules" %% "scala-xml" % "2.0.0-M1",
+  "org.json4s" %% "json4s-native" % "3.6.7"
 )
 
 lazy val xmlToJson = inputKey[Unit]("Convert an XML standard to JSON")

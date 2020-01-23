@@ -2,11 +2,11 @@ package ccssi
 package dsl
 
 import java.lang.String
-import scala.collection.Traversable
+import scala.collection.Iterable
 
 case class LearningStandards(
   version: String,
-  items: Traversable[LearningStandard]
+  items: Iterable[LearningStandard]
 ) extends json.Json4sWriter
 
 object LearningStandards extends xml.LearningStandardsXml

@@ -32,12 +32,12 @@ object LearningStandardXmlSpec extends Properties("LearningStandardXml") {
         0,
         ""
       ),
-      Traversable.empty[String],
-      Traversable.empty[String],
-      Traversable.empty[String],
+      Iterable.empty[String],
+      Iterable.empty[String],
+      Iterable.empty[String],
       "",
-      Traversable.empty[dsl.RelatedLearningStandard],
-      Traversable.empty[String]
+      Iterable.empty[dsl.RelatedLearningStandard],
+      Iterable.empty[String]
     )
   }
 }
